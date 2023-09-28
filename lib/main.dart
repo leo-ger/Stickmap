@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:maplibre_gl/mapbox_gl.dart';
+import 'package:stickmap/map.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,29 +54,7 @@ class _StartpageState extends State<Startpage> {
           title: Text(widget.title),
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
-        body: Stack(
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              child: DecoratedBox(
-                  decoration: BoxDecoration(
-                color: Colors.deepPurple.shade50,
-              )),
-            ),Center(
-                child: Column(children: <Widget>[
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height-56,
-                    width: MediaQuery.of(context).size.width,
-                    child: MaplibreMap(
-                        initialCameraPosition: CameraPosition(
-                            target: LatLng(10, 10),
-                        ),
-                    ),
-                  )
-                ]),
-              ),
-          ],
-        ));
+        body: const StickMap()
+    );
   }
 }
