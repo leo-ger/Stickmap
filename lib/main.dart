@@ -72,6 +72,7 @@ class _StartpageState extends State<Startpage> {
                         initialCameraPosition: CameraPosition(
                             target: LatLng(10, 10),
                         ),
+                      styleString: "https://openmaptiles.github.io/osm-bright-gl-style/style-cdn.json",
                     ),
                   )
                 ]),
